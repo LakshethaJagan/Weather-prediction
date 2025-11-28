@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Prediction</title>
+</head>
+<body style="font-family: Arial; margin: 40px;">
+    <h1>Weather Prediction: Will it Rain Tomorrow?</h1>
+    <form method="POST">
+        <label>Minimum Temperature:</label><br>
+        <input type="text" name="MinTemp" required><br><br>
+
+        <label>Maximum Temperature:</label><br>
+        <input type="text" name="MaxTemp" required><br><br>
+
+        <label>Humidity at 3PM:</label><br>
+        <input type="text" name="Humidity3pm" required><br><br>
+
+        <label>Pressure at 9AM:</label><br>
+        <input type="text" name="Pressure9am" required><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
